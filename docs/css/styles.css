@@ -1,7 +1,7 @@
 /* adding futura font */
 @font-face {
   font-family: 'Futura'; /* You can name this anything */
-  src: url('./fonts/futur.ttf') format('truetype');
+  src: url('../fonts/futur.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -151,7 +151,187 @@ body {
   color: #f1e9ad;
 }
 
-/* Add this to your CSS file */
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 1001;
+}
+
+.hamburger .bar {
+  width: 100%;
+  height: 3px;
+  background-color: #dbc501;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* Hamburger Animation to X */
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 20px 30px;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.98);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+  }
+  
+  .nav-links.active {
+    right: 0;
+  }
+  
+  .nav-links a {
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #dbc501;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlide 0.5s ease forwards;
+  }
+  
+  .nav-links.active a:nth-child(1) { animation-delay: 0.1s; }
+  .nav-links.active a:nth-child(2) { animation-delay: 0.2s; }
+  .nav-links.active a:nth-child(3) { animation-delay: 0.3s; }
+  .nav-links.active a:nth-child(4) { animation-delay: 0.4s; }
+  .nav-links.active a:nth-child(5) { animation-delay: 0.5s; }
+  .nav-links.active a:nth-child(6) { animation-delay: 0.6s; }
+  
+  /* Intro section mobile adjustments */
+  .intro {
+    padding: 100px 20px;
+  }
+  
+  .intro h1,
+  .intro p {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+  
+  .intro .btn {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+  
+  /* Footer mobile adjustments */
+  .platform-footer {
+    padding: 30px 20px 15px 20px;
+  }
+  
+  .platform-footer-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .platform-footer-icons {
+    gap: 25px;
+    margin-bottom: 20px;
+  }
+  
+  .platform-footer-icons a img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .platform-footer-credit {
+    font-size: 11px;
+  }
+  
+  /* Feedback section mobile adjustments */
+  .feedback-text {
+    font-size: 18px;
+    line-height: 1.8;
+    padding: 0 20px;
+  }
+  
+  #contact h1 {
+    font-size: 24px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+  
+  .follow-instagram-title {
+    font-size: 24px;
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+}
+
+/* Tablet Styles */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .navbar {
+    padding: 20px 40px;
+  }
+  
+  .nav-links {
+    gap: 40px;
+  }
+  
+  .nav-links a {
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  
+  .intro h1,
+  .intro p {
+    font-size: 28px;
+    letter-spacing: 3px;
+  }
+}
+
+/* Animation for mobile menu items */
+@keyframes fadeInSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Prevent scrolling when menu is open */
+body.no-scroll {
+  overflow: hidden;
+}
 
 @keyframes pulse {
   0% {
