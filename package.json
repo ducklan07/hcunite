@@ -1,0 +1,20 @@
+{
+  "name": "hcunite-homepage",
+  "version": "1.0.0",
+  "description": "Homepage for HC Unite",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src"
+  },
+  "keywords": [
+    "hcunite",
+    "homepage",
+    "website"
+  ],
+  "author": "Declan Ng",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}

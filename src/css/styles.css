@@ -1,0 +1,373 @@
+/* adding futura font */
+@font-face {
+  font-family: 'Futura'; /* You can name this anything */
+  src: url('./fonts/futur.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header Styling */
+header {
+  background-color: #fff;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* intro Section */
+.intro {
+  background-image: url('../assets/informal_council_pic.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 200px 20px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.intro h1,
+.intro p {
+  font-size: 35px;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  font-family: "Futura";
+  font-weight: 500;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.intro .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 20px;
+}
+
+.intro .btn:hover {
+  background-color: white;
+  color: black;
+}
+
+
+/* Sections */
+section {
+  padding: 40px 20px;
+}
+
+section h2 {
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+footer .social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+  background-color: #fff;
+}
+
+.logo {
+  font-family: 'Futura';
+  font-weight: 800;
+  font-size: 28px;
+  color: red;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  font-family: 'Futura';
+  font-weight: 300;
+  display: flex;
+  gap: 80px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #dbc501;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f1e9ad;
+}
+
+/* Add this to your CSS file */
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.07);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Fade-in keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Initial hidden state */
+.scroll-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* When visible, trigger the animation */
+.scroll-visible {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.follow-instagram {
+  background: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+  animation: fadeInUp 1s ease-out;
+}
+
+.follow-instagram h2 {
+  font-family: 'Futura';
+  font-weight: 400;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.insta-button {
+  display: inline-flex;
+  align-items: center;
+  background: white;
+  color: #d62976;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.insta-button img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.insta-button:hover {
+  background: #f4f4f4;
+  animation: pulse 0.6s ease-in-out;
+}
+
+.follow-instagram-title {
+  font-family: 'Futura';
+  font-size: 32px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: 2px;
+  color: red;
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+
+.follow-instagram-title .insta-handle {
+  color: #111;
+}
+
+behold-widget {
+  display: block;
+  margin-top: 80px;
+}
+
+.feedback {
+    text-align: center;
+}
+
+@keyframes dividerGrow {
+  from { width: 0; }
+  to { width: 33%; }
+}
+.feedback .divider {
+  width: 33%;
+  margin: 40px auto;
+  border: 0;
+  border-top: 1px solid #ccc;
+  animation: dividerGrow 1s ease;
+}
+
+.feedback-text {
+  text-align: left;
+  max-width: 700px;
+  font-size: 25px;
+  color: #333;
+  margin: 0 auto;
+  font-family: 'League Spartan';
+  font-weight: 500;
+  line-height: 2;
+
+}
+
+.feedback-button {
+  display: inline-block;
+  margin: 50px auto;
+  padding: 12px 24px;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black;
+  font-family: 'Futura';
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.feedback-button:hover {
+  background-color: lightgray;
+}
+
+#contact h1 {
+    font-family: 'Futura';
+    font-size: 30px;
+    font-weight: 800;
+    font-style: bold;
+    text-align: center;
+    margin-top: 75px; 
+    margin-bottom: 50px;
+}
+
+@keyframes fadeInUpFooter {
+  from { opacity: 0; transform: translateY(40px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+.platform-footer {
+  animation: fadeInUpFooter 1s ease;
+}
+
+.platform-footer {
+  background-color: #bd0000;
+  color: #fff;
+  padding: 40px 20px 20px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 100%;
+}
+
+.platform-footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.platform-footer-title {
+  font-family: 'Futura', Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.platform-footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 25px;
+}
+
+.platform-footer-icons a img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s;
+}
+
+.platform-footer-icons a:hover img {
+  transform: scale(1.15) rotate(-5deg);
+  filter: brightness(0.9) sepia(1) saturate(5) hue-rotate(-10deg);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.platform-footer-credit {
+  font-size: 13px;
+  font-family: 'Futura', Arial, sans-serif;
+  margin-top: 10px;
+  letter-spacing: 1.5px;
+}
+
+/* random animations */
+.btn:hover,
+.feedback-button:hover,
+.insta-button:hover {
+  animation: pulse 0.6s ease-in-out;
+}
