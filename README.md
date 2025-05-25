@@ -1,6 +1,6 @@
 # HC Unite Homepage
 
-This project is a recreation of the HC Unite homepage. It includes the HTML structure, CSS styles, and JavaScript functionality to provide a similar user experience to the original website.
+This project is a recreation of the hcunite homepage. It includes the HTML structure, CSS styles, and JavaScript functionality to provide a similar user experience to the original website. (WIP)
 
 ## Getting Started
 
@@ -26,7 +26,11 @@ To get started with this project, follow these steps:
 
 ## Usage
 
-- The homepage is designed to be responsive and should work on various screen sizes.
+-  (TODO) The homepage is designed to be responsive and should work on various screen sizes.
+
+## Progress
+
+- Currently, only the home page has been done as a brief layout
 
 ## License
 
