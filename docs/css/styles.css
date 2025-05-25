@@ -1,8 +1,8 @@
 /* adding futura font */
 @font-face {
   font-family: 'Futura'; /* You can name this anything */
-  src: url('../fonts/futur.ttf') format('truetype');
-  font-weight: normal;
+  src: url('../fonts/Futura\ Heavy\ font.ttf') format('truetype');
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -187,8 +187,8 @@ body {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Mobile Styles */
-@media screen and (max-width: 768px) {
+/* Extended Mobile/Tablet Styles - Now includes smaller laptops */
+@media screen and (max-width: 1600px) {
   .navbar {
     padding: 20px 30px;
   }
@@ -222,7 +222,7 @@ body {
   }
   
   .nav-links a {
-    font-size: 24px;
+    font-size: 28px;
     letter-spacing: 2px;
     color: #dbc501;
     opacity: 0;
@@ -236,8 +236,23 @@ body {
   .nav-links.active a:nth-child(4) { animation-delay: 0.4s; }
   .nav-links.active a:nth-child(5) { animation-delay: 0.5s; }
   .nav-links.active a:nth-child(6) { animation-delay: 0.6s; }
+}
+
+/* Tablet specific adjustments */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .intro h1,
+  .intro p {
+    font-size: 28px;
+    letter-spacing: 3px;
+  }
   
-  /* Intro section mobile adjustments */
+  .nav-links a {
+    font-size: 26px;
+  }
+}
+
+/* Mobile phone specific adjustments */
+@media screen and (max-width: 768px) {
   .intro {
     padding: 100px 20px;
   }
@@ -251,6 +266,10 @@ body {
   .intro .btn {
     font-size: 16px;
     padding: 12px 24px;
+  }
+  
+  .nav-links a {
+    font-size: 24px;
   }
   
   /* Footer mobile adjustments */
@@ -296,27 +315,33 @@ body {
     margin-top: 40px;
     padding: 0 20px;
   }
+  
+  .insta-handle:hover {
+    transform: translateY(-2px) scale(1.03);
+  }
 }
 
-/* Tablet Styles */
-@media screen and (max-width: 1024px) and (min-width: 769px) {
-  .navbar {
-    padding: 20px 40px;
+/* Large desktop - keep normal navbar */
+@media screen and (min-width: 1601px) {
+  .hamburger {
+    display: none !important;
   }
   
   .nav-links {
-    gap: 40px;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    background-color: transparent !important;
+    flex-direction: row !important;
+    gap: 80px !important;
+    backdrop-filter: none !important;
   }
   
   .nav-links a {
-    font-size: 14px;
-    letter-spacing: 2px;
-  }
-  
-  .intro h1,
-  .intro p {
-    font-size: 28px;
-    letter-spacing: 3px;
+    font-size: 16px !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
   }
 }
 
@@ -423,6 +448,69 @@ body.no-scroll {
 
 .follow-instagram-title .insta-handle {
   color: #111;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  cursor: pointer;
+  padding: 8px 16px; /* Add padding to make the glow more visible */
+  border-radius: 25px;
+}
+
+.insta-handle::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -5px;
+  left: 50%;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.insta-handle:hover {
+  transform: translateY(-3px) scale(1.05);
+  text-shadow: 0 8px 20px rgba(220, 39, 67, 0.3);
+  filter: brightness(1.2);
+  border-radius: 25px;
+}
+
+.insta-handle:hover::before {
+  width: 100%;
+}
+
+.insta-handle:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* Add a subtle glow animation on hover */
+@keyframes instagramGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(220, 39, 67, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(220, 39, 67, 0.6), 0 0 30px rgba(240, 148, 51, 0.4);
+  }
+}
+
+.insta-handle:hover {
+  animation: instagramGlow 2s ease-in-out infinite;
+}
+
+/* Mobile responsiveness for the Instagram handle */
+@media screen and (max-width: 768px) {
+  .follow-instagram-title .insta-handle {
+    font-size: 28px;
+  }
+  
+  .insta-handle:hover {
+    transform: translateY(-2px) scale(1.03);
+  }
 }
 
 behold-widget {
@@ -498,7 +586,7 @@ behold-widget {
 }
 
 .platform-footer {
-  background-color: #bd0000;
+  background-color: #700000;
   color: #fff;
   padding: 40px 20px 20px 20px;
   text-align: center;
