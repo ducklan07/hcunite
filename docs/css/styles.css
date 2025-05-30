@@ -1,6 +1,6 @@
-/* adding futura font */
+/* Futura Font */
 @font-face {
-  font-family: 'Futura'; /* You can name this anything */
+  font-family: 'Futura';
   src: url('../fonts/Futura\ Heavy\ font.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
@@ -15,9 +15,10 @@
 
 /* Body Styling */
 body {
-  font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
+  background-color: #fff;
   color: #333;
 }
 
@@ -39,82 +40,7 @@ nav ul li a {
   color: #333;
 }
 
-/* intro Section */
-.intro {
-  background-image: url('../assets/informal_council_pic.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 200px 20px;
-  text-align: center;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-}
-
-.intro h1,
-.intro p {
-  font-size: 35px;
-  margin-bottom: 20px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.5;
-  font-family: "Futura";
-  font-weight: 500;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
-.intro .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: rgba(255, 255, 255, 0.15);
-  color: white;
-  text-decoration: none;
-  border: 2px solid white;
-  border-radius: 4px;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  font-size: 20px;
-}
-
-.intro .btn:hover {
-  background-color: white;
-  color: black;
-}
-
-
-/* Sections */
-section {
-  padding: 40px 20px;
-}
-
-section h2 {
-  margin-bottom: 20px;
-}
-
-/* Footer */
-footer {
-  background-color: #fff;
-  padding: 20px;
-  text-align: center;
-  border-top: 1px solid #ccc;
-}
-
-footer .social-links a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #333;
-}
-
-body {
-  margin: 0;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #fff;
-}
-
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -151,7 +77,7 @@ body {
   color: #f1e9ad;
 }
 
-/* Hamburger Menu Styles */
+/* Hamburger Menu */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -174,7 +100,6 @@ body {
   transform-origin: center;
 }
 
-/* Hamburger Animation to X */
 .hamburger.active .bar:nth-child(1) {
   transform: rotate(45deg) translate(6px, 6px);
 }
@@ -187,412 +112,85 @@ body {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Extended Mobile/Tablet Styles - Now includes smaller laptops */
-@media screen and (max-width: 1600px) {
-  .navbar {
-    padding: 20px 30px;
-  }
-  
-  .logo {
-    font-size: 24px;
-  }
-  
-  .hamburger {
-    display: flex;
-  }
-  
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.98);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    transition: right 0.3s ease;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-  }
-  
-  .nav-links.active {
-    right: 0;
-  }
-  
-  .nav-links a {
-    font-size: 28px;
-    letter-spacing: 2px;
-    color: #dbc501;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInSlide 0.5s ease forwards;
-  }
-  
-  .nav-links.active a:nth-child(1) { animation-delay: 0.1s; }
-  .nav-links.active a:nth-child(2) { animation-delay: 0.2s; }
-  .nav-links.active a:nth-child(3) { animation-delay: 0.3s; }
-  .nav-links.active a:nth-child(4) { animation-delay: 0.4s; }
-  .nav-links.active a:nth-child(5) { animation-delay: 0.5s; }
-  .nav-links.active a:nth-child(6) { animation-delay: 0.6s; }
-}
-
-/* Tablet specific adjustments */
-@media screen and (max-width: 1024px) and (min-width: 769px) {
-  .intro h1,
-  .intro p {
-    font-size: 28px;
-    letter-spacing: 3px;
-  }
-  
-  .nav-links a {
-    font-size: 26px;
-  }
-}
-
-/* Mobile phone specific adjustments */
-@media screen and (max-width: 768px) {
-  .intro {
-    padding: 100px 20px;
-  }
-  
-  .intro h1,
-  .intro p {
-    font-size: 24px;
-    letter-spacing: 2px;
-  }
-  
-  .intro .btn {
-    font-size: 16px;
-    padding: 12px 24px;
-  }
-  
-  .nav-links a {
-    font-size: 24px;
-  }
-  
-  /* Footer mobile adjustments */
-  .platform-footer {
-    padding: 30px 20px 15px 20px;
-  }
-  
-  .platform-footer-title {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  .platform-footer-icons {
-    gap: 25px;
-    margin-bottom: 20px;
-  }
-  
-  .platform-footer-icons a img {
-    width: 35px;
-    height: 35px;
-  }
-  
-  .platform-footer-credit {
-    font-size: 11px;
-  }
-  
-  /* Feedback section mobile adjustments */
-  .feedback-text {
-    font-size: 18px;
-    line-height: 1.8;
-    padding: 0 20px;
-  }
-  
-  #contact h1 {
-    font-size: 24px;
-    margin-top: 50px;
-    margin-bottom: 30px;
-    padding: 0 20px;
-  }
-  
-  .follow-instagram-title {
-    font-size: 24px;
-    margin-top: 40px;
-    padding: 0 20px;
-  }
-  
-  .insta-handle:hover {
-    transform: translateY(-2px) scale(1.03);
-  }
-}
-
-/* Large desktop - keep normal navbar */
-@media screen and (min-width: 1601px) {
-  .hamburger {
-    display: none !important;
-  }
-  
-  .nav-links {
-    position: static !important;
-    width: auto !important;
-    height: auto !important;
-    background-color: transparent !important;
-    flex-direction: row !important;
-    gap: 80px !important;
-    backdrop-filter: none !important;
-  }
-  
-  .nav-links a {
-    font-size: 16px !important;
-    opacity: 1 !important;
-    transform: none !important;
-    animation: none !important;
-  }
-}
-
-/* Animation for mobile menu items */
-@keyframes fadeInSlide {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Prevent scrolling when menu is open */
-body.no-scroll {
-  overflow: hidden;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.07);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* Fade-in keyframes */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Initial hidden state */
-.scroll-hidden {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-/* When visible, trigger the animation */
-.scroll-visible {
-  animation: fadeInUp 1s ease-out forwards;
-}
-
-.follow-instagram {
-  background: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+/* Intro Section */
+.intro {
+  background-image: url('../assets/informal_council_pic.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 200px 20px;
   text-align: center;
-  padding: 60px 20px;
   color: white;
-  animation: fadeInUp 1s ease-out;
-}
-
-.follow-instagram h2 {
-  font-family: 'Futura';
-  font-weight: 400;
-  font-size: 28px;
-  margin-bottom: 20px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 4px;
 }
 
-.insta-button {
-  display: inline-flex;
-  align-items: center;
-  background: white;
-  color: #d62976;
-  padding: 12px 20px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  font-family: 'Roboto', sans-serif;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.insta-button img {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-}
-
-.insta-button:hover {
-  background: #f4f4f4;
-  animation: pulse 0.6s ease-in-out;
-}
-
-.follow-instagram-title {
+.intro h1,
+.intro p {
+  font-size: 35px;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
   font-family: 'Futura';
-  font-size: 32px;
-  font-weight: 800;
-  text-align: center;
-  letter-spacing: 2px;
-  color: red;
-  margin-top: 60px;
-  margin-bottom: 10px;
-}
-
-.follow-instagram-title .insta-handle {
-  color: #111;
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-  transition: all 0.3s ease;
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  cursor: pointer;
-  padding: 8px 16px; /* Add padding to make the glow more visible */
-  border-radius: 25px;
-}
-
-.insta-handle::before {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 3px;
-  bottom: -5px;
-  left: 50%;
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  transition: all 0.3s ease;
-  transform: translateX(-50%);
-}
-
-.insta-handle:hover {
-  transform: translateY(-3px) scale(1.05);
-  text-shadow: 0 8px 20px rgba(220, 39, 67, 0.3);
-  filter: brightness(1.2);
-  border-radius: 25px;
-}
-
-.insta-handle:hover::before {
-  width: 100%;
-}
-
-.insta-handle:active {
-  transform: translateY(-1px) scale(1.02);
-}
-
-/* Add a subtle glow animation on hover */
-@keyframes instagramGlow {
-  0%, 100% {
-    box-shadow: 0 0 5px rgba(220, 39, 67, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(220, 39, 67, 0.6), 0 0 30px rgba(240, 148, 51, 0.4);
-  }
-}
-
-.insta-handle:hover {
-  animation: instagramGlow 2s ease-in-out infinite;
-}
-
-/* Mobile responsiveness for the Instagram handle */
-@media screen and (max-width: 768px) {
-  .follow-instagram-title .insta-handle {
-    font-size: 28px;
-  }
-  
-  .insta-handle:hover {
-    transform: translateY(-2px) scale(1.03);
-  }
-}
-
-behold-widget {
-  display: block;
-  margin-top: 80px;
-}
-
-.feedback {
-    text-align: center;
-}
-
-@keyframes dividerGrow {
-  from { width: 0; }
-  to { width: 33%; }
-}
-.feedback .divider {
-  width: 33%;
-  margin: 40px auto;
-  border: 0;
-  border-top: 1px solid #ccc;
-  animation: dividerGrow 1s ease;
-}
-
-.feedback-text {
-  text-align: left;
-  max-width: 700px;
-  font-size: 25px;
-  color: #333;
-  margin: 0 auto;
-  font-family: 'League Spartan';
   font-weight: 500;
-  line-height: 2;
-
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
-.feedback-button {
+.intro .btn {
   display: inline-block;
-  margin: 50px auto;
-  padding: 12px 24px;
-  background-color: #fff;
-  color: #333;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
   text-decoration: none;
+  border: 2px solid white;
+  border-radius: 4px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
-  border-width: 5px;
-  border-style: solid;
-  border-color: black;
-  font-family: 'Futura';
-  font-weight: 300;
-  font-size: 15px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 20px;
 }
 
-.feedback-button:hover {
-  background-color: lightgray;
+.intro .btn:hover {
+  background-color: white;
+  color: black;
 }
 
-#contact h1 {
-    font-family: 'Futura';
-    font-size: 30px;
-    font-weight: 800;
-    font-style: bold;
-    text-align: center;
-    margin-top: 75px; 
-    margin-bottom: 50px;
+/* Sections */
+section {
+  padding: 40px 20px;
 }
 
-@keyframes fadeInUpFooter {
-  from { opacity: 0; transform: translateY(40px);}
-  to { opacity: 1; transform: translateY(0);}
-}
-.platform-footer {
-  animation: fadeInUpFooter 1s ease;
+section h2 {
+  margin-bottom: 20px;
 }
 
+/* Footer */
+footer {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+footer .social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Platform Footer */
 .platform-footer {
   background-color: #700000;
   color: #fff;
-  padding: 40px 20px 20px 20px;
+  padding: 40px 20px 20px;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
   width: 100%;
+  animation: fadeInUpFooter 1s ease;
 }
 
 .platform-footer-content {
@@ -623,7 +221,7 @@ behold-widget {
 .platform-footer-icons a:hover img {
   transform: scale(1.15) rotate(-5deg);
   filter: brightness(0.9) sepia(1) saturate(5) hue-rotate(-10deg);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .platform-footer-credit {
@@ -633,9 +231,249 @@ behold-widget {
   letter-spacing: 1.5px;
 }
 
-/* random animations */
+/* Feedback Section */
+.feedback {
+  text-align: center;
+}
+
+.feedback .divider {
+  width: 33%;
+  margin: 40px auto;
+  border: 0;
+  border-top: 1px solid #ccc;
+  animation: dividerGrow 1s ease;
+}
+
+.feedback-text {
+  text-align: left;
+  max-width: 700px;
+  font-size: 25px;
+  color: #333;
+  margin: 0 auto;
+  font-family: 'League Spartan';
+  font-weight: 500;
+  line-height: 2;
+}
+
+.feedback-button {
+  display: inline-block;
+  margin: 50px auto;
+  padding: 12px 24px;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: 5px solid black;
+  font-family: 'Futura';
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.feedback-button:hover {
+  background-color: lightgray;
+}
+
+/* Follow Instagram Section */
+.follow-instagram {
+  background: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+  animation: fadeInUp 1s ease-out;
+}
+
+.follow-instagram h2,
+.follow-instagram-title {
+  font-family: 'Futura';
+  font-weight: 400;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  color: red;
+}
+
+.follow-instagram-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-top: 60px;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.insta-button {
+  display: inline-flex;
+  align-items: center;
+  background: white;
+  color: #d62976;
+  padding: 12px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.insta-button img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.insta-button:hover {
+  background: #f4f4f4;
+  animation: pulse 0.6s ease-in-out;
+}
+
+.insta-handle {
+  color: #111;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 25px;
+}
+
+.insta-handle::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -5px;
+  left: 50%;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.insta-handle:hover {
+  transform: translateY(-3px) scale(1.05);
+  text-shadow: 0 8px 20px rgba(220, 39, 67, 0.3);
+  filter: brightness(1.2);
+  border-radius: 25px;
+  animation: instagramGlow 2s ease-in-out infinite;
+}
+
+.insta-handle:hover::before {
+  width: 100%;
+}
+
+.insta-handle:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* Animation Keyframes */
+@keyframes fadeInSlide { to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInUp { 0% { opacity: 0; transform: translateY(40px); } 100% { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInUpFooter { from { opacity: 0; transform: translateY(40px);} to { opacity: 1; transform: translateY(0);} }
+@keyframes pulse { 0% { transform: scale(1);} 50% { transform: scale(1.07);} 100% { transform: scale(1);} }
+@keyframes dividerGrow { from { width: 0;} to { width: 33%;} }
+@keyframes instagramGlow {
+  0%, 100% { box-shadow: 0 0 5px rgba(220, 39, 67, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(220, 39, 67, 0.6), 0 0 30px rgba(240, 148, 51, 0.4); }
+}
+
+/* Utility Classes */
+body.no-scroll { overflow: hidden; }
+.scroll-hidden { opacity: 0; transform: translateY(40px); transition: opacity 0.5s ease-out, transform 0.5s ease-out; }
+.scroll-visible { animation: fadeInUp 1s ease-out forwards; }
 .btn:hover,
 .feedback-button:hover,
-.insta-button:hover {
-  animation: pulse 0.6s ease-in-out;
+.insta-button:hover { animation: pulse 0.6s ease-in-out; }
+behold-widget { display: block; margin-top: 80px; }
+
+/* Contact Section */
+#contact h1 {
+  font-family: 'Futura';
+  font-size: 30px;
+  font-weight: 800;
+  text-align: center;
+  margin: 75px 0 50px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1600px) {
+  .navbar { padding: 20px 30px; }
+  .logo { font-size: 24px; }
+  .hamburger { display: flex; }
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.98);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+  }
+  .nav-links.active { right: 0; }
+  .nav-links a {
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #dbc501;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlide 0.5s ease forwards;
+  }
+  .nav-links.active a:nth-child(1) { animation-delay: 0.1s; }
+  .nav-links.active a:nth-child(2) { animation-delay: 0.2s; }
+  .nav-links.active a:nth-child(3) { animation-delay: 0.3s; }
+  .nav-links.active a:nth-child(4) { animation-delay: 0.4s; }
+  .nav-links.active a:nth-child(5) { animation-delay: 0.5s; }
+  .nav-links.active a:nth-child(6) { animation-delay: 0.6s; }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  .intro h1,
+  .intro p { font-size: 28px; letter-spacing: 3px; }
+  .nav-links a { font-size: 26px; }
+}
+
+@media screen and (max-width: 768px) {
+  .intro { padding: 100px 20px; }
+  .intro h1,
+  .intro p { font-size: 24px; letter-spacing: 2px; }
+  .intro .btn { font-size: 16px; padding: 12px 24px; }
+  .nav-links a { font-size: 24px; }
+  .platform-footer { padding: 30px 20px 15px; }
+  .platform-footer-title { font-size: 18px; margin-bottom: 20px; }
+  .platform-footer-icons { gap: 25px; margin-bottom: 20px; }
+  .platform-footer-icons a img { width: 35px; height: 35px; }
+  .platform-footer-credit { font-size: 11px; }
+  .feedback-text { font-size: 18px; line-height: 1.8; padding: 0 20px; }
+  #contact h1 { font-size: 24px; margin: 50px 0 30px; padding: 0 20px; }
+  .follow-instagram-title { font-size: 24px; margin-top: 40px; padding: 0 20px; }
+  .insta-handle:hover { transform: translateY(-2px) scale(1.03); }
+}
+
+@media screen and (min-width: 1601px) {
+  .hamburger { display: none !important; }
+  .nav-links {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    background-color: transparent !important;
+    flex-direction: row !important;
+    gap: 80px !important;
+    backdrop-filter: none !important;
+  }
+  .nav-links a {
+    font-size: 16px !important;
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
 }

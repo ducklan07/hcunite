@@ -2,9 +2,9 @@
   "name": "hcunite-homepage",
   "version": "1.0.0",
   "description": "Homepage for HC Unite",
-  "main": "src/index.html",
+  "main": "docs/index.html",
   "scripts": {
-    "start": "live-server src"
+    "start": "live-server docs"
   },
   "keywords": [
     "hcunite",
