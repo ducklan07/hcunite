@@ -16,12 +16,7 @@ To get started with this project, follow these steps:
    cd hcunite-homepage
    ```
 
-3. **Install dependencies** (if any):
-   ```
-   npm install
-   ```
-
-4. **Open the HTML file**:
+3. **Open the HTML file**:
    Open `src/index.html` in your web browser to view the homepage.
 
 ## Usage
